@@ -1,10 +1,21 @@
 
 import './App.css';
-
+import {createBrowserRouter,createRoutesFromElements,Link,RouterProvider,Route} from 'react-router-dom'
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import BookHome from './pages/BookHome';
+import Index from './pages/Index';
 function App() {
+
+  const route = createBrowserRouter(createRoutesFromElements(
+    <Route path='/' element={<Index/>}>
+      <Route index element={<Home/>}></Route>
+      <Route path='/book/:id' element={<BookHome/>}></Route>
+    </Route>
+  ))
   return (
     <div className="">
-     
+     <RouterProvider router={route}/>
     </div>
   );
 }
