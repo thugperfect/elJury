@@ -1,0 +1,21 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer{
+  html{
+    @apply bg-slate-700;
+  }
+}
+
+::-webkit-scrollbar{
+  width: 5px;
+}
+::-webkit-scrollbar-thumb{
+  background-color: rgb(176, 173, 173)
+}
+
+::-webkit-scrollbar-track{
+  background-color: black;
+}
