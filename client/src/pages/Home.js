@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import HeaderHome from '../components/HeaderHome'
 import BodyHome from '../components/BodyHome'
 
-const Home = () => {
+const Home = ({size}) => {
+
+  const [page,setPage] = useState()
   return (
     <div className='w-full min-h-[100vh] relative'>
-     <HeaderHome/>  
-     <BodyHome />   
+     <HeaderHome setPage={setPage}/>  
+     <BodyHome size={size} />   
     </div>
   )
 }
