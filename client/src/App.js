@@ -8,10 +8,17 @@ import Index from './pages/Index';
 function App() {
 
   const route = createBrowserRouter(createRoutesFromElements(
-    <Route path='/' element={<Index/>}>
-      <Route index element={<Home/>}></Route>
-      <Route path='/book/:id' element={<BookHome/>}></Route>
-    </Route>
+    <>
+    <Route path='/' element={<Home/>}> </Route>
+    
+
+    <Route path='/book' element={<Index/>}>
+    <Route index element={<BookHome/>}></Route>
+    <Route path=':id' element={<BookHome/>}></Route>
+   
+  </Route>
+    </>
+    
   ))
   return (
     <div className="">
