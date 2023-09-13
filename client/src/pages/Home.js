@@ -1,11 +1,12 @@
 import React from 'react'
-import { Outlet } from 'react-router-dom'
+import HeaderHome from '../components/HeaderHome'
+import BodyHome from '../components/BodyHome'
 
 const Home = () => {
   return (
-    <div>
-      <h1 className='bg-red-500'>HOME</h1>
-      <Outlet/>
+    <div className='w-full min-h-[100vh] relative'>
+     <HeaderHome/>  
+     <BodyHome />   
     </div>
   )
 }

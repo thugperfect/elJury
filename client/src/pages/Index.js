@@ -4,7 +4,9 @@ import { Outlet } from 'react-router-dom'
 
 const Index = () => {
   return (
-    <div><Navbar/><Outlet/>   </div>
+    <div><Navbar/>
+    <Outlet/>
+    </div>
   )
 }
 

@@ -5,21 +5,23 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import BookHome from './pages/BookHome';
 import Index from './pages/Index';
-import Bookpage from './components/Bookpage';
-function App() {
+import Bookpage from './pages/Bookpage';
+import useSizeProvider from './components/useSizeProvider';
 
+function App() {
+  const size = useSizeProvider()
   const route = createBrowserRouter(createRoutesFromElements(
     <>
-    <Route path='/' element={<Home/>}></Route>
-    <Route path='/book' element={<Index/>}>
-        <Route index element={<BookHome/>}></Route>
-        <Route path=':id' element={<Bookpage/>}></Route>
+    <Route path='/' element={<Home size = {size}/>}></Route>
+    <Route path='/book' element={<Index size={size}/>}>
+        <Route index element={<BookHome size={size} />}></Route>
+        <Route path=':id' element={<Bookpage size={size} />}></Route>
     </Route>
     </>
     
   ))
   return (
-    <div className="">
+    <div className="bg-slate-100 dark:bg-zinc-800">
      <RouterProvider router={route}/>
     </div>
   );
