@@ -7,7 +7,7 @@ const Home = ({size}) => {
   const [page,setPage] = useState()
   return (
     <div className='w-full min-h-[100vh] relative'>
-     <HeaderHome setPage={setPage}/>  
+     <HeaderHome setPage={setPage} size={size}/>  
      <BodyHome size={size} />   
     </div>
   )
