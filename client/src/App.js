@@ -5,18 +5,16 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import BookHome from './pages/BookHome';
 import Index from './pages/Index';
+import Bookpage from './components/Bookpage';
 function App() {
 
   const route = createBrowserRouter(createRoutesFromElements(
     <>
-    <Route path='/' element={<Home/>}> </Route>
-    
-
+    <Route path='/' element={<Home/>}></Route>
     <Route path='/book' element={<Index/>}>
-    <Route index element={<BookHome/>}></Route>
-    <Route path=':id' element={<BookHome/>}></Route>
-   
-  </Route>
+        <Route index element={<BookHome/>}></Route>
+        <Route path=':id' element={<Bookpage/>}></Route>
+    </Route>
     </>
     
   ))
