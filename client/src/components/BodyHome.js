@@ -3,8 +3,25 @@ import React from 'react'
 const BodyHome = () => {
   return (
     <div className='w-full flex'>
-      <div className=' w-1/3 min-h-[89vh]  border-r-1 border-slate-700'></div>
-      <div className='w-2/3 min-h-[89vh] ' ></div>
+      <div className=' w-1/3 min-h-[89vh]  bg-gray-100 dark:bg-zinc-800 flex flex-col justify-evenly items-center'>
+        <div>
+
+        </div>
+
+        <div className='flex flex-col items-center w-full'>
+          <input type="text" name="" id="" className='w-4/5  h-[35px] rounded-md mb-2 px-2 outline-none' placeholder='Enter your Email...' />
+          <input type="text" name="" id="" className='w-4/5  h-[35px] rounded-md mb-2 px-2 outline-none' placeholder='Enter your Password...'/>
+          <button className='w-4/5 h-[35px] rounded-md bg-orange-400 text-xl'>Login</button>
+        </div>
+        <div className='text-gray-400'>
+          Don't Have an Account ? 
+        </div>
+
+      </div>
+      <div className='w-2/3 min-h-[89vh] bg-slate-200 dark:bg-zinc-900' >
+
+
+      </div>
     </div>
   )
 }
