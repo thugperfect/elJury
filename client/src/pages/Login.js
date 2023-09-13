@@ -16,7 +16,7 @@ const Login = () => {
 
   </div>
   <div className='text-gray-400'>
-          Don't Have an Account ? <Link className='text-orange-400' to='/signup'>Signup</Link>
+          Don't Have an Account ? <Link className='text-orange-400' to='/signup'>&nbsp;Signup</Link>
         </div>
     
     </>
