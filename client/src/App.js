@@ -1,11 +1,9 @@
 
 import './App.css';
 import {createBrowserRouter,createRoutesFromElements,Link,RouterProvider,Route} from 'react-router-dom'
-import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import BookHome from './pages/BookHome';
 import Index from './pages/Index';
-import Bookpage from './pages/Bookpage';
 import useSizeProvider from './components/useSizeProvider';
 import Signup from './pages/Signup';
 import LoginPage from './pages/LoginPage';
