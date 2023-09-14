@@ -4,7 +4,7 @@ import SingleBook from "./SingleBook";
 const BookHome = () => {
   return (
     <div className="bg-white flex justify-center text-black dark:text-white dark:bg-black">
-      <div className="w-5/6  p-4">
+      <div className=" w-full md:w-5/6  p-4">
         <div className="flex gap-2">
           <div className="w-[100px] flex justify-center bg-blue-500 p-2 rounded-r-full rounded-l-full cursor-pointer">
             All Books
@@ -30,16 +30,7 @@ const BookHome = () => {
                 <SingleBook />
                 <SingleBook />
                 <SingleBook />
-                <SingleBook /> <SingleBook />
-                <SingleBook />
-                <SingleBook /> <SingleBook />
-                <SingleBook />
-                <SingleBook />
-                <SingleBook /> <SingleBook />
-                <SingleBook />
-                <SingleBook />
-                <SingleBook />
-                <SingleBook />
+           
               </div>
             </div>
           </div>
