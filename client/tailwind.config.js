@@ -11,6 +11,9 @@ module.exports = {
         'llg':'900px',
         'xl':'1000px',
         '2xl':'1200px'
+      },
+      backgroundImage:{
+        'backgroung-image':'url("/src/images/bg.jpg")',
       }
     },
   },
