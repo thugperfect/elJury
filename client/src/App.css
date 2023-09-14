@@ -8,6 +8,19 @@
    
   }
 }
+.horizontal::-webkit-scrollbar{
+  height: 5px;
+}
+.horizontal::-webkit-scrollbar-thumb{
+  background-color: rgb(175, 183, 190);
+}
+.horizontal::-webkit-scrollbar-track{
+  background-color: white
+}
+
+
+
+
 
 .bottom-border{
   border-bottom: 1px solid rgb(168, 162, 162);

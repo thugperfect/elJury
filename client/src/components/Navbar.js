@@ -16,8 +16,8 @@ const Navbar = () => {
         <input type="text" ref={searchRef} name="" id="" className="h-[30px] w-[200px] rounded-r-full dark:bg-zinc-950 outline outline-1 outline-slate-300 dark:outline-slate-500 px-2" />
       </div>
       <div className="flex gap-2 items-center">
-        <BiSolidUserCircle className="w-[20px] h-[20px] md:w-[30px] md:h-[30px]" />
-        <BsThreeDotsVertical className="w-[20px] h-[20px] md:w-[30px] md:h-[30px] rounded-full outline outline-1 outline-slate-400 p-2" />
+        <BiSolidUserCircle className="cursor-pointer w-[20px] h-[20px] md:w-[30px] md:h-[30px]" />
+        <BsThreeDotsVertical className="cursor-pointer w-[20px] h-[20px] md:w-[30px] md:h-[30px] rounded-full outline outline-1 outline-slate-400 p-2" />
       </div>
     </div>
   );
