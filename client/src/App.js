@@ -8,15 +8,15 @@ import Index from './pages/Index';
 import Bookpage from './pages/Bookpage';
 import useSizeProvider from './components/useSizeProvider';
 import Signup from './pages/Signup';
-import LoginPage from './components/LoginPage';
+import LoginPage from './pages/LoginPage';
 
 function App() {
   const size = useSizeProvider()
   const route = createBrowserRouter(createRoutesFromElements(
     <>
-    <Route path='/' element={<Home size = {size}/>}></Route>
+    <Route path='/' element={<Home size={size}/>}></Route>
     <Route path='/signup' element={<Signup/>}></Route>
-    <Route path='/login' element={<Signup/>}></Route>
+    <Route path='/login' element={<LoginPage />}></Route>
     <Route path='/book' element={<Index size={size}/>}>
         <Route index element={<BookHome size={size} />}></Route>
         <Route path=':id' element={<LoginPage size={size} />}></Route>

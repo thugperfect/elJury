@@ -6,7 +6,7 @@ const Home = ({size}) => {
 
   return (
     <div className='w-full min-h-[100vh] relative'>
-     <HeaderHome size={size}/>  
+     <HeaderHome size={size} />  
      <BodyHome size={size} />   
     </div>
   )

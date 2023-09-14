@@ -16,7 +16,7 @@ const Signup = () => {
     <button className='w-4/5 h-[35px] rounded-md bg-orange-400 text-xl'>SignUp</button>
   </div>
   <div className='text-gray-400 flex justify-center'>
-          Already Have an Account ? <Link className='text-orange-400' to='/'>&nbsp;Login</Link>
+          Already Have an Account ? <Link className='text-orange-400' to='/login'>&nbsp;Login</Link>
     </div>
     </div>
     

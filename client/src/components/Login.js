@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 
 const Login = () => {
   return (
-
     <div className=" w-1/3 min-h-[700px]  bg-gray-100 dark:bg-zinc-800 flex flex-col justify-evenly items-center">
     <div></div>
      <div className='flex flex-col items-center w-full'>
