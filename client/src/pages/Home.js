@@ -4,10 +4,9 @@ import BodyHome from '../components/BodyHome'
 
 const Home = ({size}) => {
 
-  const [page,setPage] = useState()
   return (
     <div className='w-full min-h-[100vh] relative'>
-     <HeaderHome setPage={setPage} size={size}/>  
+     <HeaderHome size={size}/>  
      <BodyHome size={size} />   
     </div>
   )

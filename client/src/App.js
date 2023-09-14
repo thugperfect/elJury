@@ -8,6 +8,7 @@ import Index from './pages/Index';
 import Bookpage from './pages/Bookpage';
 import useSizeProvider from './components/useSizeProvider';
 import Signup from './pages/Signup';
+import LoginPage from './components/LoginPage';
 
 function App() {
   const size = useSizeProvider()
@@ -15,9 +16,10 @@ function App() {
     <>
     <Route path='/' element={<Home size = {size}/>}></Route>
     <Route path='/signup' element={<Signup/>}></Route>
+    <Route path='/login' element={<Signup/>}></Route>
     <Route path='/book' element={<Index size={size}/>}>
         <Route index element={<BookHome size={size} />}></Route>
-        <Route path=':id' element={<Bookpage size={size} />}></Route>
+        <Route path=':id' element={<LoginPage size={size} />}></Route>
     </Route>
     </>
     
