@@ -30,7 +30,9 @@ const BookHome = () => {
                 <SingleBook />
                 <SingleBook />
                 <SingleBook />
-           
+                <SingleBook />
+                <SingleBook />
+                <SingleBook />
               </div>
             </div>
           </div>
