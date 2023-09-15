@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { BsGear, BsThreeDotsVertical } from "react-icons/bs";
 import { AiOutlineSearch } from "react-icons/ai";
 import { BiSolidUserCircle,BiMailSend } from "react-icons/bi";
+import { FcAbout } from "react-icons/fc";
 import {useNavigate} from "react-router-dom"
 const Navbar = () => {
   const searchRef = useRef()
@@ -20,7 +21,7 @@ const Navbar = () => {
       <div className="flex gap-2 items-center">
         <BiSolidUserCircle className="cursor-pointer w-[20px] h-[20px] md:w-[30px] md:h-[30px]" />
         <BsThreeDotsVertical className="cursor-pointer w-[20px] h-[20px] md:w-[30px] md:h-[30px] rounded-full outline outline-1 outline-slate-400 p-2" />
-        <BiMailSend className="cursor-pointer w-[20px] h-[20px] md:w-[30px] md:h-[30px]" />
+        <FcAbout className="cursor-pointer w-[20px] h-[20px] md:w-[30px] md:h-[30px]" />
       </div>
     </div>
   );
