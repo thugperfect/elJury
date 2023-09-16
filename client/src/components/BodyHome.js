@@ -8,7 +8,7 @@ const BodyHome = ({ size }) => {
       {size.width > 900 ? (
         <>
           <Login />
-          <div className="w-2/3 min-h-[700px] bg-slate-200 dark:bg-zinc-900 dark:text-white relative bg-backgroung-image bg-cover flex justify-center items-center">
+          <div className="w-2/3 min-h-[700px] bg-zinc-900 text-white relative bg-backgroung-image bg-cover flex justify-center items-center">
           
             <div className="md:flex">
             <Link to="/book"><div className=" w-[150px] flex justify-center items-center h-[40px] bg-blue-500 cursor-pointer mr-5 mb-5">Browse Books</div></Link>
@@ -19,7 +19,7 @@ const BodyHome = ({ size }) => {
         </>
       ) : (
         // 
-        <div className="w-full min-h-[700px] bg-slate-200 dark:bg-zinc-900 dark:text-white relative bg-backgroung-image bg-cover flex justify-center items-center">
+        <div className="w-full min-h-[700px] bg-zinc-900 text-white relative bg-backgroung-image bg-cover flex justify-center items-center">
           
         <div className="md:flex">
         <Link to="/book"><div className=" w-[150px] flex justify-center items-center h-[40px] bg-blue-500 cursor-pointer mr-5 mb-5">Browse Books</div></Link>

@@ -6,8 +6,8 @@ const LoginPage = () => {
   return (
     <div className="flex flex-col items-center min-h-[100vh]">
       <HeaderHome />
-      <div className="h-[500px] md:h-[600px] flex flex-col items-center justify-evenly w-[350px] md:w-[500px] outline outline-1 outline-gray-300 dark:outline-gray-700 rounded-xl mt-6 bg-slate-50 dark:bg-zinc-900">
-        <div className="text-2xl dark:text-gray-400"></div>
+      <div className="h-[500px] md:h-[600px] flex flex-col items-center justify-evenly w-[350px] md:w-[500px] outline outline-1 outline-gray-700 rounded-xl mt-6 bg-zinc-900">
+        <div className="text-2xl text-gray-400"></div>
         <div className="flex flex-col items-center w-full ">
           <input
             type="text"
