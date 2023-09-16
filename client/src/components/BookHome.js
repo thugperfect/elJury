@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState,useEffect } from "react";
 import SingleBook from "./SingleBook";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -9,23 +9,28 @@ import "swiper/css/navigation";
 
 import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
 import All from "../contents/All";
+import Ayurvedha from "../contents/Ayurvedha";
+import Unani from "../contents/Unani";
+import Siddha from "../contents/Siddha";
 
 const BookHome = () => {
+  const [content,changeContent] = useState(<All/>)
+
   return (
     <div className=" flex justify-center text-white bg-black">
       <div className=" w-full md:w-5/6  p-4 ">
         <div className="flex overflow-x-auto horizontal p-2 ">
           <div className="flex gap-2">
-            <div className="w-[100px] text-lg h-[40px] flex justify-center items-center bg-blue-500  rounded-r-full rounded-l-full cursor-pointer">
+            <div onClick={()=>changeContent(<All/>)} className="w-[100px] text-lg h-[40px] flex justify-center items-center bg-blue-500  rounded-r-full rounded-l-full cursor-pointer">
               All Books
             </div>
-            <div className="w-[100px] text-lg h-[40px] flex justify-center items-center bg-blue-500  rounded-r-full rounded-l-full cursor-pointer">
+            <div onClick={()=>changeContent(<Ayurvedha/>)} className="w-[100px] text-lg h-[40px] flex justify-center items-center bg-blue-500  rounded-r-full rounded-l-full cursor-pointer">
               Ayurvedha
             </div>
-            <div className="w-[100px] text-lg h-[40px] flex justify-center items-center bg-blue-500  rounded-r-full rounded-l-full cursor-pointer">
+            <div onClick={()=>changeContent(<Unani/>)} className="w-[100px] text-lg h-[40px] flex justify-center items-center bg-blue-500  rounded-r-full rounded-l-full cursor-pointer">
               Unani
             </div>
-            <div className="w-[100px] text-lg h-[40px] flex justify-center items-center bg-blue-500  rounded-r-full rounded-l-full cursor-pointer">
+            <div onClick={()=>changeContent(<Siddha/>)} className="w-[100px] text-lg h-[40px] flex justify-center items-center bg-blue-500  rounded-r-full rounded-l-full cursor-pointer">
               Siddha
             </div>
           </div>
@@ -93,7 +98,7 @@ const BookHome = () => {
           </div>
 
           <div className="w-full">
-            <All/>
+            {content}
           </div>
         </div>
       </div>

@@ -29,7 +29,7 @@ const Navbar = ({size}) => {
       <div className="text-2xl md:text-4xl flex items-center gap-3">
 
         <div onClick={()=>navigate('/book')}  className="cursor-pointer flex items-center gap-2">
-          <img src={logo} alt="none" className="w-[50px] h-[50px] rounded-full hidden md:block" />
+          <img src={logo} alt="none" className="w-[50px] h-[50px] rounded-tl-2xl rounded-br-2xl hidden md:block" />
           El Jury</div>
       </div>
       
