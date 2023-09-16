@@ -32,6 +32,7 @@ const Navbar = ({size}) => {
           <img src={logo} alt="none" className="w-[50px] h-[50px] rounded-full hidden md:block" />
           El Jury</div>
       </div>
+      
       <div></div>
       <div></div>
       {
