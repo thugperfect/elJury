@@ -30,10 +30,11 @@ const BookHome = () => {
           </div>
         </div>
         <div className="flex flex-col items-center mt-5">
-          <div className="w-full h-[300px] lg:h-[400px] bg-zinc-700 flex justify-center items-center p-2  ">
-            <div className="w-[350px] md:w-[450px] lg:w-[700px] flex justify-center">
+          <div className="w-full h-[300px] lg:h-[400px] bg-zinc-700 p-4  ">
+         <div className="font-bold text-4xl">Newly Added</div>
+            <div className=" w-full  flex items-center justify-center "> 
               <Swiper
-              
+
                 effect={"coverflow"}
                 grabCursor={true}
                 centeredSlides={true}
@@ -91,7 +92,7 @@ const BookHome = () => {
           </div>
 
           <div className="w-full">
-            <div className="name text-2xl mb-3">New Books</div>
+            <div className="name text-4xl mb-3">All Books</div>
             <div className="flex overflow-x-scroll horizontal">
               <div className="flex">
                 <SingleBook />

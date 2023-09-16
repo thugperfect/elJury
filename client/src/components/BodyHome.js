@@ -12,7 +12,7 @@ const BodyHome = ({ size }) => {
           
             <div className="md:flex">
             <Link to="/book"><div className=" w-[150px] flex justify-center items-center h-[40px] bg-blue-500 cursor-pointer mr-5 mb-5">Browse Books</div></Link>
-            <Link to='/signup'><div className="pr-5 pl-5 pt-2 pb-2 bg-blue-500 cursor-pointer">Join Us</div></Link>
+            <Link to='/signup'><div className=" w-[150px] flex justify-center items-center h-[40px] pr-5 pl-5 pt-2 pb-2 bg-blue-500 cursor-pointer">Join Us</div></Link>
             </div>
           
           </div>
