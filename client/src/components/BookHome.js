@@ -31,7 +31,7 @@ const BookHome = () => {
         </div>
         <div className="flex flex-col items-center mt-5">
           <div className="w-full h-[300px] md:h-[400px] bg-zinc-700 flex justify-center items-center p-2  ">
-            <div className="w-[500px]">
+            <div className="w-[700px]">
               <Swiper
                 effect={"coverflow"}
                 grabCursor={true}
@@ -79,9 +79,10 @@ const BookHome = () => {
                 </SwiperSlide>
 
                 <div className="slider-controler flex justify-center ">
+<div className="swiper-pagination w-full"></div>
                   <div className="swiper-button-prev slider-arrow">{'<<'}</div>
                   <div className="swiper-button-next slider-arrow">{'>>'}</div>
-                  <div className="swiper-pagination flex justify-center"></div>
+                 
                 </div>
               </Swiper>
             </div>
