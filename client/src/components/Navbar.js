@@ -21,7 +21,7 @@ const Navbar = ({size}) => {
 </div>
   const searchIcon =<div className='flex flex-col items-center'>
   <div onClick={toggleSearch} className='w-[40px] h-[40px] rounded-full outline outline-1 outline-gray-400  flex items-center justify-center'><AiOutlineSearch/></div>
-<div className={toggleSearchBar ? "absolute w-[250px] p-5 bg-gray-200 mt-11 rounded-lg flex justify-center ":"hidden"}  >{searchBar}</div>
+<div className={toggleSearchBar ? "absolute w-[250px] p-5 bg-gray-200 mt-[50px] rounded-lg flex justify-center ":"hidden"}  >{searchBar}</div>
   </div>
 
   return (
