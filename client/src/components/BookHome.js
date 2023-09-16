@@ -1,15 +1,15 @@
 import React from "react";
 import SingleBook from "./SingleBook";
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Pagination } from 'swiper/modules'
-import { useEffect } from "react";
-import 'swiper/css';
-import 'swiper/css/pagination';
-
+import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
+
 const BookHome = () => {
-  
   return (
     <div className=" flex justify-center text-white bg-black">
       <div className=" w-full md:w-5/6  p-4 ">
@@ -30,54 +30,82 @@ const BookHome = () => {
           </div>
         </div>
         <div className="flex flex-col items-center mt-5">
-          <div className="w-full h-[300px] md:h-[400px] bg-zinc-700 flex justify-center items-center">
-          <>
-            <Swiper
-        slidesPerView={4}
-        centeredSlides={true}
-        spaceBetween={30}
-        grabCursor={true}
-        pagination={{
-          clickable: true,
-        }}
-      
-        modules={[Pagination]}
-        className="mySwiper"
-      >
-        <SwiperSlide><SingleBook/></SwiperSlide>
-        <SwiperSlide><SingleBook/></SwiperSlide>
-        <SwiperSlide><SingleBook/></SwiperSlide>
-        <SwiperSlide><SingleBook/></SwiperSlide>
-        <SwiperSlide><SingleBook/></SwiperSlide>
-        <SwiperSlide><SingleBook/></SwiperSlide>
-        <SwiperSlide><SingleBook/></SwiperSlide>
-        <SwiperSlide><SingleBook/></SwiperSlide>
-        <SwiperSlide><SingleBook/></SwiperSlide>
-      </Swiper>
-            
-            </>
-          </div>
+          <div className="w-full h-[300px] md:h-[400px] bg-zinc-700 flex justify-center items-center p-2  ">
+            <div className="w-[500px]">
+              <Swiper
+                effect={"coverflow"}
+                grabCursor={true}
+                centeredSlides={true}
+                loop={true}
+                slidesPerView={"auto"}
+                coverflowEffect={{
+                  rotate: 0,
+                  stretch: 0,
+                  depth: 100,
+                  modifier: 2.5,
+                }}
+                pagination={{ el: ".swiper-pagination", clickable: true }}
+                navigation={{
+                  nextEl: ".swiper-button-next",
+                  prevEl: ".swiper-button-prev",
+                  clickable: true,
+                }}
+                modules={[EffectCoverflow, Pagination, Navigation]}
+                className="swiper_container"
+              >
+                <SwiperSlide>
+                 <SingleBook />
+                </SwiperSlide>
+                <SwiperSlide>
+              <SingleBook />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <SingleBook />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <SingleBook />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <SingleBook />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <SingleBook />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <SingleBook />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <SingleBook />
+                </SwiperSlide>
 
-          
+                <div className="slider-controler flex justify-center ">
+                  <div className="swiper-button-prev slider-arrow">{'<<'}</div>
+                  <div className="swiper-button-next slider-arrow">{'>>'}</div>
+                  <div className="swiper-pagination flex justify-center"></div>
+                </div>
+              </Swiper>
+            </div>
+          </div>
 
           <div className="w-full">
             <div className="name text-2xl mb-3">New Books</div>
-        <div className="flex overflow-x-scroll horizontal">
-
-          <div className="flex">
-            <SingleBook/>
-            <SingleBook/>
-            <SingleBook/>
-            <SingleBook/>
-            <SingleBook/>
-            <SingleBook/><SingleBook/>
-            <SingleBook/>
-            <SingleBook/>
-            <SingleBook/><SingleBook/>
-            <SingleBook/>
-            <SingleBook/>
-          </div>
-        </div>
+            <div className="flex overflow-x-scroll horizontal">
+              <div className="flex">
+                <SingleBook />
+                <SingleBook />
+                <SingleBook />
+                <SingleBook />
+                <SingleBook />
+                <SingleBook />
+                <SingleBook />
+                <SingleBook />
+                <SingleBook />
+                <SingleBook />
+                <SingleBook />
+                <SingleBook />
+                <SingleBook />
+              </div>
+            </div>
           </div>
         </div>
       </div>
