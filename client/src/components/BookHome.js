@@ -54,7 +54,7 @@ const BookHome = () => {
                 className="swiper_container"
               >
                 <SwiperSlide>
-                 <SingleBook />
+                 <SingleBook className='swiper-slide'/>
                 </SwiperSlide>
                 <SwiperSlide>
               <SingleBook />
@@ -77,13 +77,14 @@ const BookHome = () => {
                 <SwiperSlide>
                   <SingleBook />
                 </SwiperSlide>
+<div className="w-full bg-green-500">
 
-                <div className="slider-controler flex justify-center ">
-<div className="swiper-pagination w-full"></div>
+<div className="slider-controler flex justify-center ">
+                    <div className="swiper-pagination w-full"></div>
                   <div className="swiper-button-prev slider-arrow">{'<<'}</div>
                   <div className="swiper-button-next slider-arrow">{'>>'}</div>
-                 
-                </div>
+</div>
+                  </div>
               </Swiper>
             </div>
           </div>
