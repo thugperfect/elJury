@@ -8,6 +8,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
+import All from "../contents/All";
 
 const BookHome = () => {
   return (
@@ -92,24 +93,7 @@ const BookHome = () => {
           </div>
 
           <div className="w-full">
-            <div className="name text-4xl mb-3">All Books</div>
-            <div className="flex overflow-x-scroll horizontal">
-              <div className="flex">
-                <SingleBook />
-                <SingleBook />
-                <SingleBook />
-                <SingleBook />
-                <SingleBook />
-                <SingleBook />
-                <SingleBook />
-                <SingleBook />
-                <SingleBook />
-                <SingleBook />
-                <SingleBook />
-                <SingleBook />
-                <SingleBook />
-              </div>
-            </div>
+            <All/>
           </div>
         </div>
       </div>
