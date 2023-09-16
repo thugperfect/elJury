@@ -44,6 +44,7 @@ const Navbar = ({size}) => {
         <FcAbout className="cursor-pointer w-[20px] h-[20px] md:w-[30px] md:h-[30px]" />
       </div>
     </div>
+    
   );
 };
 
