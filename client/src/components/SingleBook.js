@@ -2,7 +2,7 @@ import React from 'react'
 
 const SingleBook = ({text}) => {
   return (
-    <div className='w-[150px] h-[200px] md:w-[200px] md:h-[250px]  bg-green-300 m-2 rounded-lg'>{text}</div>
+    <div className='w-[150px] h-[200px] lg:w-[200px] lg:h-[250px] border border-1 border-black  bg-green-300 m-2 rounded-lg'>{text}</div>
   )
 }
 

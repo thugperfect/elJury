@@ -15,23 +15,23 @@ const BookHome = () => {
       <div className=" w-full md:w-5/6  p-4 ">
         <div className="flex overflow-x-auto horizontal p-2 ">
           <div className="flex gap-2">
-            <div className="w-[100px] text-sm h-[40px] flex justify-center items-center bg-blue-500  rounded-r-full rounded-l-full cursor-pointer">
+            <div className="w-[100px] text-lg h-[40px] flex justify-center items-center bg-blue-500  rounded-r-full rounded-l-full cursor-pointer">
               All Books
             </div>
-            <div className="w-[100px] text-sm h-[40px] flex justify-center items-center bg-blue-500  rounded-r-full rounded-l-full cursor-pointer">
+            <div className="w-[100px] text-lg h-[40px] flex justify-center items-center bg-blue-500  rounded-r-full rounded-l-full cursor-pointer">
               Ayurvedha
             </div>
-            <div className="w-[100px] text-sm h-[40px] flex justify-center items-center bg-blue-500  rounded-r-full rounded-l-full cursor-pointer">
+            <div className="w-[100px] text-lg h-[40px] flex justify-center items-center bg-blue-500  rounded-r-full rounded-l-full cursor-pointer">
               Unani
             </div>
-            <div className="w-[100px] text-sm h-[40px] flex justify-center items-center bg-blue-500  rounded-r-full rounded-l-full cursor-pointer">
+            <div className="w-[100px] text-lg h-[40px] flex justify-center items-center bg-blue-500  rounded-r-full rounded-l-full cursor-pointer">
               Siddha
             </div>
           </div>
         </div>
         <div className="flex flex-col items-center mt-5">
-          <div className="w-full h-[300px] md:h-[400px] bg-zinc-700 flex justify-center items-center p-2  ">
-            <div className="w-[700px]">
+          <div className="w-full h-[300px] lg:h-[400px] bg-zinc-700 flex justify-center items-center p-2  ">
+            <div className="w-[350px] md:w-[450px] lg:w-[700px] flex justify-center">
               <Swiper
                 effect={"coverflow"}
                 grabCursor={true}
