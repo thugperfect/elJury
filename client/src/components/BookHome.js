@@ -62,7 +62,7 @@ const BookHome = () => {
                 className="swiper_container"
               >
                 <SwiperSlide>
-                 <SingleBook className='swiper-slide'/>
+                 <SingleBook/>
                 </SwiperSlide>
                 <SwiperSlide>
               <SingleBook />

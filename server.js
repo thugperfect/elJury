@@ -5,7 +5,7 @@ const express = require('express')
 const cors = require('cors')
 const mongoose = require('mongoose')
 const app = express()
-
+const router = require('./router/authRouter')
 app.use(express.json())
 app.use(cors())
 
@@ -25,6 +25,7 @@ mongoose.connection.once('open',()=>{
     console.log('MongoDB ==> Connected')
 })
 
+app.use('/',router)
 app.listen(port,()=>{
     console.log(`SERVER@${port}`);
 })
