@@ -25,7 +25,8 @@ mongoose.connection.once('open',()=>{
     console.log('MongoDB ==> Connected')
 })
 
-app.use('/',router)
+app.use('/api',router)
+
 app.listen(port,()=>{
     console.log(`SERVER@${port}`);
 })
