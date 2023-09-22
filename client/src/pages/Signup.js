@@ -8,26 +8,33 @@ const Signup = () => {
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [confirm,setConfirm] = useState('');
-  const [result,setResult] = useState('');
+  const [confirm, setConfirm] = useState("");
+  const [result, setResult] = useState("");
 
-  const postData = () =>{
-    setResult('')
-    if (password !== confirm){
-      setResult('Enter correct Passwords')
+  const postData = () => {
+    setResult("");
+    if (password !== confirm) {
+      setResult("Enter correct Passwords");
       console.log(result);
-      return
+      return;
     }
-try {
-
-  axios.post('http://localhost:5000/api/register', {
-    name,phone,email,password
-  }).then(res=>console.log(res))
-  
-} catch (error) {
-  console.log(error.message);
-}
-  }
+    try {
+      axios
+        .post("http://localhost:5000/api/register", {
+          name,
+          phone,
+          email,
+          password,
+        })
+        .then((res) => {
+          if (res.data.msg) {
+            setResult(res.data.msg);
+          }
+        });
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
   return (
     <div className="flex flex-col items-center min-h-[100vh]">
       <HeaderHome />
@@ -35,20 +42,21 @@ try {
       <div className="h-[500px] md:h-[600px] flex flex-col items-center justify-evenly w-[350px] md:w-[500px] outline outline-1 outline-gray-700 rounded-xl mt-6  bg-zinc-900">
         <div className="text-2xl text-gray-400">Create Account</div>
         <div className="flex flex-col items-center w-full ">
-          {
-            (result)
-            ? <div className="w-4/5  h-[55px] rounded-md mb-2 px-2 outline-none bg-red-500 text-white flex justify-center items-center">{result}</div>
-            :""
+          {result ? (
+            <div className="w-4/5  h-[55px] rounded-md mb-2 px-2 outline-none bg-red-500 text-white flex justify-center items-center">
+              {result}
+            </div>
+          ) : (
+            ""
+          )}
 
-          }
-         
           <input
             type="text"
             name=""
             id=""
             className="w-4/5  h-[35px] rounded-md mb-2 px-2 outline-none"
             placeholder="Enter your Name..."
-            onChange={e=>setName(e.target.value)}
+            onChange={(e) => setName(e.target.value)}
           />
           <input
             type="text"
@@ -56,7 +64,7 @@ try {
             id=""
             className="w-4/5  h-[35px] rounded-md mb-2 px-2 outline-none"
             placeholder="Enter your Phone..."
-            onChange={e=>setPhone(e.target.value)}
+            onChange={(e) => setPhone(e.target.value)}
           />
 
           <input
@@ -65,7 +73,7 @@ try {
             id=""
             className="w-4/5  h-[35px] rounded-md mb-2 px-2 outline-none"
             placeholder="Enter your Email..."
-            onChange={e=>setEmail(e.target.value)}
+            onChange={(e) => setEmail(e.target.value)}
           />
           <input
             type="text"
@@ -73,7 +81,7 @@ try {
             id=""
             className="w-4/5  h-[35px] rounded-md mb-2 px-2 outline-none"
             placeholder="Enter your Password..."
-            onChange={e=>setPassword(e.target.value)}
+            onChange={(e) => setPassword(e.target.value)}
           />
           <input
             type="text"
@@ -81,11 +89,17 @@ try {
             id=""
             className="w-4/5  h-[35px] rounded-md mb-2 px-2 outline-none"
             placeholder="Confirm Password..."
-            onChange={e=>setConfirm(e.target.value)}
+            onChange={(e) => setConfirm(e.target.value)}
           />
-          <button className={(name && email && password && confirm && phone)?"w-4/5 h-[35px] rounded-md bg-orange-400 text-xl":"w-4/5 h-[35px] rounded-md bg-orange-400 text-xl cursor-not-allowed"}
-          disabled={!(name && email && password && confirm && phone)}
-          onClick={postData}>
+          <button
+            className={
+              name && email && password && confirm && phone
+                ? "w-4/5 h-[35px] rounded-md bg-orange-400 text-xl"
+                : "w-4/5 h-[35px] rounded-md bg-orange-400 text-xl cursor-not-allowed"
+            }
+            disabled={!(name && email && password && confirm && phone)}
+            onClick={postData}
+          >
             SignUp
           </button>
         </div>
