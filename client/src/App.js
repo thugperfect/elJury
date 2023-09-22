@@ -15,7 +15,7 @@ function App() {
     <Route path='/' element={<Home size={size}/>}></Route>
     <Route path='/signup' element={<Signup/>}></Route>
     <Route path='/login' element={<LoginPage />}></Route>
-    <Route path='/book' element={<Index size={size}/>}>
+    <Route path='/books' element={<Index size={size}/>}>
         <Route index element={<BookHome size={size} />}></Route>
         <Route path=':id' element={<LoginPage size={size} />}></Route>
     </Route>

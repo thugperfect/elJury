@@ -34,7 +34,7 @@ const Signup = () => {
             setResult(res.data.msg);
           }
           if (res.data.status) {
-            navigate('/login')
+            navigate('/books')
           }
          
         });

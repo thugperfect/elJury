@@ -19,11 +19,13 @@ const userController = {
             const password_hash = await bcrypt.hash(password,12)
             if (password.length<8) return res.json({msg:'Password must be more than 8 chars...'})
             const user = new User({name,phone,email,password:password_hash})
+            const token = await jwt.sign({id:user._id},process.env.ACCESS_TOKEN)
             await user.save()
 
             res.json({
                 msg:'Register Success',
                 status:true,
+                token,
                 user:{
                     ...user._doc
                 }
@@ -44,13 +46,12 @@ const userController = {
         const ismatch = await bcrypt.compare(password,user.password)
 
         if (!ismatch) return res.json({msg:'Invalid username or Password'})
-
-            const token = await jwt.sign({id:user._id},process.env.ACCESS_TOKEN)
+        const token = await jwt.sign({id:user._id},process.env.ACCESS_TOKEN)
+          
         res.json({
             msg:'Logged In',
             status:true,
             token
-        
         })
         } catch (error) {
          return res.json({msg:error.message})   
