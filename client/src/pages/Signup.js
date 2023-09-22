@@ -2,14 +2,17 @@ import React from "react";
 import HeaderHome from "../components/HeaderHome";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 const Signup = () => {
+  const navigate =useNavigate()
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirm, setConfirm] = useState("");
   const [result, setResult] = useState("");
+  
 
   const postData = () => {
     setResult("");
@@ -30,6 +33,10 @@ const Signup = () => {
           if (res.data.msg) {
             setResult(res.data.msg);
           }
+          if (res.data.status) {
+            navigate('/login')
+          }
+         
         });
     } catch (error) {
       console.log(error.message);
@@ -43,7 +50,7 @@ const Signup = () => {
         <div className="text-2xl text-gray-400">Create Account</div>
         <div className="flex flex-col items-center w-full ">
           {result ? (
-            <div className="w-4/5  h-[55px] rounded-md mb-2 px-2 outline-none bg-red-500 text-white flex justify-center items-center">
+            <div className={"w-4/5  h-[55px] rounded-md mb-2 px-2 outline-none bg-red-500 text-white flex justify-center items-center"}>
               {result}
             </div>
           ) : (

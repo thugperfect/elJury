@@ -2,8 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
-
+import { useNavigate } from "react-router-dom";
 const Login = () => {
+  const navigate  = useNavigate()
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [result, setResult] = useState("");
@@ -18,6 +19,9 @@ const Login = () => {
       .then((res) => {
         if (res.data.msg) {
           setResult(res.data.msg);
+        }
+        if (res.data.status) {
+          navigate('/books')
         }
       });
   };
