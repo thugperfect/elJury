@@ -23,6 +23,7 @@ const userController = {
 
             res.json({
                 msg:'Register Success',
+                status:true,
                 user:{
                     ...user._doc
                 }
@@ -46,7 +47,8 @@ const userController = {
 
             const token = await jwt.sign({id:user._id},process.env.ACCESS_TOKEN)
         res.json({
-            status:'User Logged in',
+            msg:'Logged In',
+            status:true,
             token
         
         })
