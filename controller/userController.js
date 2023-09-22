@@ -33,6 +33,28 @@ const userController = {
         } catch (error) {
            return res.json({msg:error.message})
         }
+    },
+    login: async (req,res) =>{
+        try {
+            const {email,password} = req.body
+        const copy_email = email
+        const user = await User.findOne({email:copy_email})
+        if (!user) return res.json({msg:'Invalid Username or password'})
+
+        const ismatch = await bcrypt.compare(password,user.password)
+
+        if (!ismatch) return res.json({msg:'Invalid username or Password'})
+
+
+        res.json({
+            status:'User Logged in'
+        
+        })
+        } catch (error) {
+         return res.json({msg:error.message})   
+        }
+        
+
     }
 }
 
