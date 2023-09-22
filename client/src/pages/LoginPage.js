@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import HeaderHome from "../components/HeaderHome";
 import { useState,useEffect } from "react";
+import axios from "axios";
 const LoginPage = () => {
 
   const [email,setEmail] = useState('')
@@ -19,6 +20,7 @@ const LoginPage = () => {
       <div className="h-[500px] md:h-[600px] flex flex-col items-center justify-evenly w-[350px] md:w-[500px] outline outline-1 outline-gray-700 rounded-xl mt-6 bg-zinc-900">
         <div className="text-2xl text-gray-400"></div>
         <div className="flex flex-col items-center w-full ">
+         
           <input
             type="text"
             name=""
