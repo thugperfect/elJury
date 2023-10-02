@@ -14,8 +14,10 @@ const dataController =async (req, res) => {
             book_comments2_content,
             book_comments3_author,
             book_comments3_content,
+            user_name,
+             user_Email
           } = req.body;
-        
+        console.log(req.body)
           const book = new Book({
             book_name,
             book_image,

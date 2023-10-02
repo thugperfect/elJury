@@ -43,13 +43,14 @@ const data = {book_name,book_image,book_publication,book_author,book_topic,book_
   console.log(data)
 
 
-  axios.post('http://localhost:5000/api/data',{
-     data
-   }).then(res=>{
-     console.log(res.data.msg) 
+  axios.post('http://localhost:5000/api/data',data).then(res=>{
+    if(res.data.msg){
+      alert(res.data.msg) 
+    }
+    }).catch(err=>{
+      console.log(err.message)
     })
 
-}
 }
 
   return (
@@ -154,4 +155,5 @@ const data = {book_name,book_image,book_publication,book_author,book_topic,book_
       </form>
     </div>
   );
+  }
 export default AddBook;
