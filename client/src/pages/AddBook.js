@@ -15,6 +15,9 @@ const AddBook = () => {
 
   const comments3_author = useRef();
   const comments3_content = useRef();
+  const comments4_author = useRef();
+  const comments4_content = useRef();
+
 
   const uname = useRef()
   const uemail = useRef()
@@ -131,11 +134,13 @@ const data = {book_name,book_image,book_publication,book_author,book_topic,book_
           type="text"
           className="w-4/5 m-2 outline-none px-5 h-[30px] rounded-lg"
           placeholder="Book Comment4 Author(Optional)..."
+          ref={comments4_author}
         />
         <input
           type="text"
           className="w-4/5 m-2 outline-none px-5 h-[30px] rounded-lg"
           placeholder="Book Comment4(Optional)..."
+          ref={comments4_content}
         />
         <input
           type="text"
