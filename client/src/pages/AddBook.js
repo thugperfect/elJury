@@ -16,29 +16,46 @@ const AddBook = () => {
   const comments3_author = useRef();
   const comments3_content = useRef();
 
-const submitData =() =>{
+  const uname = useRef()
+  const uemail = useRef()
+
+  const url = process.env.SERVER_URL ||'http://localhost:5000/'
+const submitData =(e) =>{
+  e.preventDefault()
   const book_name = name.current.value
   const book_image = image.current.value
   const book_publication = publication.current.value
   const book_author = author.current.value
   const book_topic = topic.current.value
 
-  const book_comments1_author = comments1_author.current.vaue
-  const book_comments1_content = comments1_content.current.vaue
+  const book_comments1_author = comments1_author.current.value
+  const book_comments1_content = comments1_content.current.value
 
   const book_comments2_author = comments2_author.current.value
   const book_comments2_content = comments2_content.current.value
 
   const book_comments3_author = comments3_author.current.value
    const book_comments3_content =comments3_content.current.value
+const user_name =uname.current.value
+const user_email = uemail.current.value
+const data = {book_name,book_image,book_publication,book_author,book_topic,book_comments1_author,book_comments1_content,
+  book_comments2_author,book_comments2_content,book_comments3_author,book_comments3_content,user_name,user_email}
+  console.log(data)
 
 
+  axios.post('http://localhost:5000/api/data',{
+     data
+   }).then(res=>{
+     console.log(res.data.msg) 
+    })
+
+}
 }
 
   return (
     <div className=" min-h-[89vh] bg-zinc-900 flex justify-center">
       <form
-        onSubmit={(e) => e.preventDefault()}
+        onSubmit={(e) => submitData(e)}
         className="w-4/5 h-full flex flex-col justify-center items-center"
       >
         <input
@@ -123,18 +140,18 @@ const submitData =() =>{
           type="text"
           className="w-4/5 m-2 outline-none px-5 h-[30px] rounded-lg"
           placeholder="Your Name..."
+          ref={uname}
         />
         <input
           type="text"
           className="w-4/5 m-2 outline-none px-5 h-[30px] rounded-lg"
           placeholder="Your Email..."
+          ref={uemail}
         />
-        <button type="submit" onClick={submitData} className="bg-green-500 p-5">
+        <button type="submit" className="bg-green-500 p-5">
           Submit
         </button>
       </form>
     </div>
   );
-};
-
 export default AddBook;
