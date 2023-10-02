@@ -7,6 +7,7 @@ const dataController =async (req, res) => {
             book_image,
             book_publication,
             book_author,
+            book_topic,
             book_comments1_author,
             book_comments1_content,
             book_comments2_author,
@@ -20,6 +21,7 @@ const dataController =async (req, res) => {
             book_image,
             book_publication,
             book_author,
+            book_topic,
             book_comments: {
                 book_comments1:{
                     book_comments1_author,
@@ -33,8 +35,8 @@ const dataController =async (req, res) => {
                     book_comments3_author,
                     book_comments3_content
                 }
-            },
-          });
+                },
+   });
           await book.save()
 
           res.json({msg:'Book Saved...'})

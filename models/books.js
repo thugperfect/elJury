@@ -16,6 +16,9 @@ const BookSchema = new mongoose.Schema({
     book_author:{
         type:String,
     },
+    book_topic:{
+        type:String,
+    },
     book_comments:{
         book_comments1:{
             book_comments1_author:{

@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { BsGear, BsThreeDotsVertical } from "react-icons/bs";
+import { BsThreeDotsVertical } from "react-icons/bs";
 import { AiOutlineSearch } from "react-icons/ai";
 import { BiSolidUserCircle,BiSolidBookAdd } from "react-icons/bi";
 import { FcAbout } from "react-icons/fc";
