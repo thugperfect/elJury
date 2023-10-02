@@ -43,7 +43,7 @@ const data = {book_name,book_image,book_publication,book_author,book_topic,book_
   console.log(data)
 
 
-  axios.post('http://localhost:5000/api/data',data).then(res=>{
+  axios.post(`${url}api/data`,data).then(res=>{
     if(res.data.msg){
       alert(res.data.msg) 
     }
