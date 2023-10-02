@@ -17,7 +17,7 @@ const dataController = async (req, res) => {
       book_comments4_author,
       book_comments4_content,
       user_name,
-      user_Email,
+      user_email,
     } = req.body;
     console.log(req.body);
     const book = new Book({
@@ -45,7 +45,7 @@ const dataController = async (req, res) => {
         },
       },
       user_name,
-      user_Email,
+      user_email,
     });
     await book.save();
 
