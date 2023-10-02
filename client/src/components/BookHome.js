@@ -15,7 +15,7 @@ import Siddha from "../contents/Siddha";
 
 const BookHome = () => {
   const [content,changeContent] = useState(<All/>)
-
+  const imgs = ['https://www.indianbooksandperiodicals.com/images/11900/_Ayush_Pub_Ayurvedic_management_of_.jpg','https://www.indianbooksandperiodicals.com/images/11900/brain_ageing_ayurveda.jpg','https://www.indianbooksandperiodicals.com/images/11900/clinical_research_protocols_traditional_health_sciences.jpg','https://www.indianbooksandperiodicals.com/images/11900/clinical_evaluation_certain_ayurvedic_mental_retardation.jpg','https://www.indianbooksandperiodicals.com/images/11900/clinical_studies_certain_Ayurvedic_formulation.jpg','https://www.indianbooksandperiodicals.com/images/11900/_Ayush_Pub_Comprehensive_Technical_4.jpg','https://www.indianbooksandperiodicals.com/images/11900/atlas_macroscopic_microscopic_character.jpg','https://www.indianbooksandperiodicals.com/images/sdf/_Ayush_Pub_A_Practical_Handbook_of_.jpg','https://www.indianbooksandperiodicals.com/images/11900/_Ayush_Pub_Exploration_of_Veterinar1.jpg','https://www.indianbooksandperiodicals.com/images/11900/himalaya_arogya_vanaspatiyan.jpg']
   return (
     <div className=" flex justify-center text-white bg-black">
       <div className=" w-full md:w-5/6  p-4 ">
@@ -61,10 +61,15 @@ const BookHome = () => {
                 modules={[EffectCoverflow, Pagination, Navigation]}
                 className="swiper_container"
               >
-                <SwiperSlide>
-                 <SingleBook/>
-                </SwiperSlide>
-                <SwiperSlide>
+                {
+                  imgs.map(k=>(
+                    <SwiperSlide>
+                 <SingleBook img = {k}/>
+                    </SwiperSlide>
+                  ))
+                }
+                
+                {/* <SwiperSlide>
               <SingleBook />
                 </SwiperSlide>
                 <SwiperSlide>
@@ -84,7 +89,7 @@ const BookHome = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                   <SingleBook />
-                </SwiperSlide>
+                </SwiperSlide> */}
 <div className="w-full bg-green-500">
 
 <div className="slider-controler flex justify-center ">
