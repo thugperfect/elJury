@@ -22,7 +22,7 @@ const AddBook = () => {
   const uname = useRef()
   const uemail = useRef()
 
-  const url = process.env.SERVER_URL ||'http://localhost:5000/'
+  const url = process.env.REACT_APP_SERVER_URL ||'http://localhost:5000/'
 const submitData =(e) =>{
   e.preventDefault()
   const book_name = name.current.value

@@ -1,14 +1,17 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+
 const Login = () => {
   const navigate  = useNavigate()
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [result, setResult] = useState("");
-  const url = process.env.SERVER_URL || 'http://localhost:5000/'
+  const url = process.env.REACT_APP_SERVER_URL ||  'http://localhost:5000/'
+
   const postData = (email, password) => {
     setResult("");
     axios
