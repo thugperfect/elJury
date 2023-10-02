@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 const LoginPage = () => {
+  const url = process.env.SERVER_URL || 'http://localhost:5000/'
   const navigate = useNavigate()
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -12,7 +13,7 @@ const LoginPage = () => {
   const postData = (email, password) => {
     setResult("");
     axios
-      .post("http://localhost:5000/api/login", {
+      .post(`${url}api/login`, {
         email,
         password,
       })

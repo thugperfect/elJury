@@ -10,7 +10,7 @@ const dataRouter = require('./router/dataRouter')
 app.use(express.json())
 app.use(cors())
 
-const port = process.env.PORT
+const port = process.env.PORT || 5000
 const db = process.env.MONGO_URL
 
 mongoose.connect(db,{

@@ -12,7 +12,7 @@ const Signup = () => {
   const [password, setPassword] = useState("");
   const [confirm, setConfirm] = useState("");
   const [result, setResult] = useState("");
-  
+  const url = process.env.SERVER_URL || 'http://localhost:5000/'
 
   const postData = () => {
     setResult("");
@@ -23,7 +23,7 @@ const Signup = () => {
     }
     try {
       axios
-        .post("http://localhost:5000/api/register", {
+        .post(`${url}api/register`, {
           name,
           phone,
           email,
