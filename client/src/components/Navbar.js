@@ -7,6 +7,8 @@ import {Link, useNavigate} from "react-router-dom"
 import logo from '../images/eljurylogo.jpg'
 import {useState} from 'react'
 const Navbar = ({size}) => {
+  const path = window.location.pathname
+
   const searchRef = useRef()
   const navigate =  useNavigate()
 
@@ -28,7 +30,7 @@ const Navbar = ({size}) => {
     <div className="w-full h-[80px] bg-zinc-800  text-white flex justify-between items-center px-2 md:px-5">
       <div className="text-2xl md:text-4xl flex items-center gap-3">
 
-        <div onClick={()=>navigate('/book')}  className="cursor-pointer flex items-center gap-2">
+        <div onClick={()=>navigate('/books')}  className="cursor-pointer flex items-center gap-2">
           <img src={logo} alt="none" className="w-[50px] h-[50px] rounded-tl-2xl rounded-br-2xl hidden md:block" />
           El Jury</div>
       </div>
@@ -36,13 +38,17 @@ const Navbar = ({size}) => {
       <div></div>
       <div></div>
       {
+        path !== '/books/addbook' ?
           size.width>600 ? ( searchBar ):( searchIcon )
-        }
+          :""
+
+      }
+       
       <div className="flex gap-2 items-center">
         <BiSolidUserCircle className="cursor-pointer w-[20px] h-[20px] md:w-[30px] md:h-[30px]" />
         <BsThreeDotsVertical className="cursor-pointer w-[20px] h-[20px] md:w-[30px] md:h-[30px] rounded-full outline outline-1 outline-slate-400 p-2" />
         <FcAbout className="cursor-pointer w-[20px] h-[20px] md:w-[30px] md:h-[30px]" />
-        <Link to={'/addbook'}>
+        <Link to={'/books/addbook'}>
           <BiSolidBookAdd className="cursor-pointer w-[20px] h-[20px] md:w-[30px] md:h-[30px]"/>
           </Link>
       </div>
