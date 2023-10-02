@@ -7,6 +7,7 @@ import Index from './pages/Index';
 import useSizeProvider from './components/useSizeProvider';
 import Signup from './pages/Signup';
 import LoginPage from './pages/LoginPage';
+import AddBook from './pages/AddBook';
 
 function App() {
   const size = useSizeProvider()
@@ -19,6 +20,7 @@ function App() {
         <Route index element={<BookHome size={size} />}></Route>
         <Route path=':id' element={<LoginPage size={size} />}></Route>
     </Route>
+    <Route path='addbook' element={<AddBook/>}></Route>
     </>
     
   ))

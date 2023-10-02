@@ -1,9 +1,9 @@
 import React, { useRef } from "react";
 import { BsGear, BsThreeDotsVertical } from "react-icons/bs";
 import { AiOutlineSearch } from "react-icons/ai";
-import { BiSolidUserCircle,BiMailSend } from "react-icons/bi";
+import { BiSolidUserCircle,BiSolidBookAdd } from "react-icons/bi";
 import { FcAbout } from "react-icons/fc";
-import {useNavigate} from "react-router-dom"
+import {Link, useNavigate} from "react-router-dom"
 import logo from '../images/eljurylogo.jpg'
 import {useState} from 'react'
 const Navbar = ({size}) => {
@@ -42,6 +42,9 @@ const Navbar = ({size}) => {
         <BiSolidUserCircle className="cursor-pointer w-[20px] h-[20px] md:w-[30px] md:h-[30px]" />
         <BsThreeDotsVertical className="cursor-pointer w-[20px] h-[20px] md:w-[30px] md:h-[30px] rounded-full outline outline-1 outline-slate-400 p-2" />
         <FcAbout className="cursor-pointer w-[20px] h-[20px] md:w-[30px] md:h-[30px]" />
+        <Link to={'/addbook'}>
+          <BiSolidBookAdd className="cursor-pointer w-[20px] h-[20px] md:w-[30px] md:h-[30px]"/>
+          </Link>
       </div>
     </div>
     
