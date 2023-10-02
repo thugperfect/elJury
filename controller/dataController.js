@@ -36,6 +36,8 @@ const dataController =async (req, res) => {
                     book_comments3_content
                 }
                 },
+                user_name,
+                user_Email
    });
           await book.save()
 

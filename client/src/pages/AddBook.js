@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-
+import axios from "axios";
 const AddBook = () => {
   const name = useRef();
   const image = useRef();
@@ -16,7 +16,24 @@ const AddBook = () => {
   const comments3_author = useRef();
   const comments3_content = useRef();
 
+const submitData =() =>{
+  const book_name = name.current.value
+  const book_image = image.current.value
+  const book_publication = publication.current.value
+  const book_author = author.current.value
+  const book_topic = topic.current.value
 
+  const book_comments1_author = comments1_author.current.vaue
+  const book_comments1_content = comments1_content.current.vaue
+
+  const book_comments2_author = comments2_author.current.value
+  const book_comments2_content = comments2_content.current.value
+
+  const book_comments3_author = comments3_author.current.value
+   const book_comments3_content =comments3_content.current.value
+
+
+}
 
   return (
     <div className=" min-h-[89vh] bg-zinc-900 flex justify-center">
@@ -112,7 +129,7 @@ const AddBook = () => {
           className="w-4/5 m-2 outline-none px-5 h-[30px] rounded-lg"
           placeholder="Your Email..."
         />
-        <button type="submit" className="bg-green-500 p-5">
+        <button type="submit" onClick={submitData} className="bg-green-500 p-5">
           Submit
         </button>
       </form>

@@ -44,6 +44,13 @@ const BookSchema = new mongoose.Schema({
                 type:String,
             }
         },
+    },
+    user_name:{
+        type:String
+    },
+    user_Email:{
+        type:String
     }
+   
 })
 module.exports = mongoose.model('Book',BookSchema)
