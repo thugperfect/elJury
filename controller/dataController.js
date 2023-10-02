@@ -43,3 +43,4 @@ const dataController =async (req, res) => {
     }
  
 };
+module.exports = dataController

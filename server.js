@@ -6,6 +6,7 @@ const cors = require('cors')
 const mongoose = require('mongoose')
 const app = express()
 const router = require('./router/authRouter')
+const dataRouter = require('./router/dataRouter')
 app.use(express.json())
 app.use(cors())
 
@@ -26,7 +27,7 @@ mongoose.connection.once('open',()=>{
 })
 
 app.use('/api',router)
-
+app.use('/api',dataRouter)
 app.listen(port,()=>{
     console.log(`SERVER@${port}`);
 })
